@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <title>Scores Game</title>
+</head>
+<body>
+    <h1>The score is <div id="score">{{ SCORE }}</div></h1>
+</body>
+</html>
+
+<!--
+            An example for adding image using url_for (in body section):
+<img src="{{ url_for('static', filename='img/WorldOfGames04.jfif') }}" alt="Cinque Terre">
+-->

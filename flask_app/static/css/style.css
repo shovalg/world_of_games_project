@@ -1,0 +1,12 @@
+body,
+html {
+      min-height: 100%;
+}
+
+body {
+      background: #f4f4f4; /* Default background color */
+      background-image: url('../img/cover_img.jpg');
+      background-position: center;
+      background-repeat:no-repeat;
+      background-size: cover;
+}
