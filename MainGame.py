@@ -1,6 +1,6 @@
 # import logging
 from Live import load_game, welcome
-from flask_app import app
+# from flask_app import app
 from Utils import screen_cleaner
 
 # Main program that gets username as an input and perform input validation.
@@ -54,4 +54,4 @@ if __name__ == '__main__':
     game_result_msg = game_result(load_game[2])
     print(game_result_msg)
     screen_cleaner()
-    app.run(host="0.0.0.0", port=5000, debug=False)
+    # app.run(host="0.0.0.0", port=5000, debug=False)
