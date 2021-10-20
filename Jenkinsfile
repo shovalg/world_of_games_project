@@ -9,28 +9,30 @@ pipeline {
         }
         stage ('Build') {
            steps {
-                  if (isUnix()) {
-                    sh "docker-compose build -d"
-                  }
-                  else {
-                    bat "docker-compose build -d"
-                  }
+//                   if (isUnix()) {
+//                     sh "docker-compose build -d"
+//                   }
+//                   else {
+//                     bat "docker-compose build -d"
+//                   }
             }
         }
-        stage ('Run') {
-            steps {
-                sh 'hostname'
-            }
-        }
-        stage ('Test') {
-            steps {
-                sh 'hostname'
-            }
-        }
-        stage ('Finalize') {
-            steps {
-                sh 'hostname'
-            }
-        }
-    }
+   }
 }
+//         stage ('Run') {
+//             steps {
+//                 sh 'hostname'
+//             }
+//         }
+//         stage ('Test') {
+//             steps {
+//                 sh 'hostname'
+//             }
+//         }
+//         stage ('Finalize') {
+//             steps {
+//                 sh 'hostname'
+//             }
+//         }
+//     }
+// }
