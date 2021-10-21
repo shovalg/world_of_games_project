@@ -4,4 +4,4 @@ services:
     build: .
     image: shovalg19/world_of_games_part4
     ports:
-      - "5000:5000"
+      - "5000:8777"
