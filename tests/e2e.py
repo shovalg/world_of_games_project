@@ -6,7 +6,7 @@ class TestWebService:
         self.my_driver = webdriver.Chrome(executable_path="web_drivers/chromedriver.exe")
 
     def test_scores_service(self):
-        app_url = "http://localhost:5000"
+        app_url = "http://localhost:8777"
         self.my_driver.get(app_url)
         score = self.my_driver.find_element_by_id("score").text
         score = int(score)
