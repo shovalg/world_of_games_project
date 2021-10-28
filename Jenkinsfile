@@ -9,13 +9,12 @@ pipeline {
         }
         stage ('Build') {
            steps {
-//                 bat "docker-compose build"
-                  if (isUnix()) {
-                    sh "docker-compose build -d"
-                  }
-                  else {
-                    bat "docker-compose build -d"
-                  }
+                bat "docker-compose build"
+            }
+        }
+        stage ('Run') {
+            steps {
+                bat "docker-compose up"
             }
         }
    }
