@@ -3,5 +3,12 @@ services:
   world_of_games:
     build: .
     image: shovalg19/world_of_games_part4
+#    volumes:                 # This configuration is part of working trials with docker volumes
+#      - scores:/var/lib      # This configuration is part of working trials with docker volumes
     ports:
       - "8777:5000"
+
+# This configuration is part of working trials with docker volumes
+
+#volumes:
+#  - scores:
