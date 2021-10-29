@@ -3,7 +3,9 @@ from selenium import webdriver
 
 class TestWebService:
     def __init__(self):
-        self.my_driver = webdriver.Chrome(executable_path="web_drivers/chromedriver.exe")
+        chrome_options = webdriver.ChromeOptions()
+        chrome_options.add_argument('headless')
+        self.my_driver = webdriver.Chrome(executable_path="web_drivers/chromedriver.exe", options=chrome_options)
 
     def test_scores_service(self):
         app_url = "http://localhost:8777"
