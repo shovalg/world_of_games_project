@@ -26,7 +26,7 @@ pipeline {
         stage ('Finalize') {
             steps {
                 bat 'docker-compose down'
-                bat 'docker-compose push shovalg19/world_of_games_part4'
+                bat 'docker-compose push'
             }
         }
    }
