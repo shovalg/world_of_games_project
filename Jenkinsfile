@@ -19,7 +19,9 @@ pipeline {
         }
         stage ('Test') {
             steps {
-                bat 'docker exec -it world-of-games-part4-world_of_games-1 sh -c cd tests'
+                bat """cd tests
+                python -c 'e2e.py'"""
+//                 bat 'docker exec -it world-of-games-part4-world_of_games-1 sh -c cd tests'
 //                  "&& python e2e.py"
             }
         }
@@ -30,3 +32,5 @@ pipeline {
 //         }
    }
 }
+// bat """cd tests
+// python -c 'import e2e; e2e.main_function()'"""
