@@ -19,7 +19,7 @@ pipeline {
         }
         stage ('Test') {
             steps {
-                bat 'docker exec -it world-of-games-part4-world_of_games-1 bash -c cd tests'
+                bat 'docker exec -it world-of-games-part4-world_of_games-1 sh -c cd tests'
 //                  "&& python e2e.py"
             }
         }
