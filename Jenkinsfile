@@ -21,15 +21,14 @@ pipeline {
             steps {
                 bat """cd tests
                 python -c 'e2e.py'"""
-//                 bat 'docker exec -it world-of-games-part4-world_of_games-1 sh -c cd tests'
-//                  "&& python e2e.py"
             }
         }
-//         stage ('Finalize') {
-//             steps {
-//                 sh 'hostname'
-//             }
-//         }
+        stage ('Finalize') {
+            steps {
+                bat 'docker-compose down'
+                bat 'docker-compose push'
+            }
+        }
    }
 }
 // bat """cd tests
