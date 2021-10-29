@@ -26,10 +26,8 @@ pipeline {
         stage ('Finalize') {
             steps {
                 bat 'docker-compose down'
-                bat 'docker-compose push'
+                bat 'docker-compose push shovalg19/world_of_games_part4'
             }
         }
    }
 }
-// bat """cd tests
-// python -c 'import e2e; e2e.main_function()'"""
