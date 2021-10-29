@@ -17,22 +17,16 @@ pipeline {
                 bat "docker-compose up -d"
             }
         }
-   }
-}
-//         stage ('Run') {
-//             steps {
-//                 sh 'hostname'
-//             }
-//         }
-//         stage ('Test') {
-//             steps {
-//                 sh 'hostname'
-//             }
-//         }
+        stage ('Test') {
+            steps {
+                sh "cd tests"
+                sh "python e2e.py"
+            }
+        }
 //         stage ('Finalize') {
 //             steps {
 //                 sh 'hostname'
 //             }
 //         }
-//     }
-// }
+   }
+}
